@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Async/Await Demo</title>
+</head>
+<body>
+  <h1>Async/Await Demo</h1>
+  <button id="start">Start Async Task</button>
+  <p id="output">Click the button to begin</p>
+
+  <script>
+    function waitOneSecond() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("⏰ One second has passed!");
+        }, 1000);
+      });
+    }
+
+    async function onButtonClick() {
+      const output = document.getElementById("output");
+      output.textContent = "🔵 Waiting 1 second...";
+
+      const message = await waitOneSecond();
+
+      output.textContent = "🟢 Done: " + message;
+    }
+
+    document.getElementById("start").addEventListener("click", onButtonClick);
+  </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Web Agent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 MCP Web Agent</h1>
+            <p>Model Context Protocol Agent with Web Interface</p>
+        </header>
+
+        <main>
+            <div class="agent-section">
+                <h2>🎯 Agent Task</h2>
+                <div class="task-input">
+                    <textarea
+                        id="taskInput"
+                        placeholder="Enter your task here... (e.g., 'Find a great recipe for Banoffee Pie, then summarize it in markdown to banoffee.md')"
+                        rows="3"
+                    ></textarea>
+                    <button id="runButton" onclick="runAgent()">
+                        <span id="buttonText">🚀 Run Agent</span>
+                        <span id="spinner" class="spinner" style="display: none;"></span>
+                    </button>
+                </div>
+
+                <div class="quick-tasks">
+                    <h3>📋 Quick Tasks</h3>
+                    <div class="task-buttons">
+                        <button onclick="setTask('Find a great recipe for Banoffee Pie, then summarize it in markdown to banoffee.md')">
+                            🍰 Find Recipe
+                        </button>
+                        <button onclick="setTask('Research the latest news about AI developments and create a summary report')">
+                            📰 AI News Summary
+                        </button>
+                        <button onclick="setTask('Find information about Python web frameworks and compare them in a markdown file')">
+                            🐍 Python Frameworks
+                        </button>
+                        <button onclick="setTask('Search for the best practices for MCP servers and document them')">
+                            🔧 MCP Best Practices
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h2>📊 Results</h2>
+
+                <div class="result-info">
+                    <div class="info-item">
+                        <strong>Task:</strong> <span id="executedTask"></span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Status:</strong> <span id="taskStatus"></span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Completed:</strong> <span id="timestamp"></span>
+                    </div>
+                </div>
+
+                <div class="output-section">
+                    <h3>📝 Agent Output</h3>
+                    <pre id="agentOutput" class="output-text"></pre>
+                </div>
+
+                <div class="files-section" id="filesSection" style="display: none;">
+                    <h3>📁 Generated Files</h3>
+                    <div id="filesList" class="files-list"></div>
+                </div>
+            </div>
+
+            <div class="error-section" id="errorSection" style="display: none;">
+                <h2>❌ Error</h2>
+                <div class="error-content">
+                    <p id="errorMessage"></p>
+                    <details>
+                        <summary>Technical Details</summary>
+                        <pre id="errorDetails"></pre>
+                    </details>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by OpenAI Agents SDK + Model Context Protocol</p>
+            <div class="status-indicator">
+                <span id="serverStatus">🟢 Connected</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

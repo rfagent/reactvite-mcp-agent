@@ -1,0 +1,37 @@
+# =========== LLM & TOOL KEYS ===========
+OPENAI_API_KEY=
+SERPER_API_KEY=
+PUSHOVER_USER=
+PUSHOVER_TOKEN=
+BRAVE_API_KEY=
+SMITHERY_API_KEY=
+ALPHA_VANTAGE_API_KEY=
+POLYGON_API_KEY=
+FINANCIAL_DATASETS_API_KEY=
+OPENWEATHER_API_KEY=
+
+# =========== (Optional) Other Providers ===========
+OPENAI_API_KEY_wxi76=
+ANTHROPIC_API_KEY=
+GOOGLE_API_KEY=
+DEEPSEEK_API_KEY=
+COHERE_API_KEY=
+GROQ_API_KEY=
+HF_TOKEN=
+WANDB_API_KEY=
+SENDGRID_API_KEY_wxi76=
+SENDGRID_API_KEY=
+FROM_EMAIL=
+NGROK_AUTHTOKEN=
+
+# =========== LangSmith Tracing ===========
+LANGSMITH_TRACING=true
+LANGSMITH_PROJECT=mastering-agents
+LANGSMITH_ENDPOINT=https://api.smith.langchain.com
+LANGSMITH_API_KEY=
+
+
+# =========== Ollama & Model (if needed) ===========
+OLLAMA_API=http://localhost:11434/api/chat
+MODEL=llama3.2
+
